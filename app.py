@@ -71,7 +71,7 @@ def update(id):
 			WHERE idNum = :id""",
 			{'idnum': idnum,'fname': fname,'lname': lname,'yearlv': yearlv,'gender': gender,'course': course,'dept': dept,'id': id,})
 		get_db().commit()
-		get_db().close
+		get_db().close()
 		return redirect('/List_page')
 	cur.execute("SELECT idNum, fName, lName, yearLvl FROM students WHERE idNum=:idnum",
 		{'idnum': id})
