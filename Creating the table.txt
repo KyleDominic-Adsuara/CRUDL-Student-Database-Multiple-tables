@@ -1,0 +1,32 @@
+# Creating the table
+#conn = sqlite3.connect('CRUD.db')
+#c = conn.cursor()
+
+#def create_tables():
+#	c.execute("""CREATE TABLE Students(
+#		idNum text PRIMARY KEY NOT NULL,
+#		fName varchar(25),
+#		lName varchar(25),
+#		yearLvl text,
+#		gender char(1),
+#		course varchar,
+#		department varchar,
+#		foreign key(course) references Course(courseCode),
+#		foreign key(department) references Department(dname))""")
+
+#	c.execute("""CREATE TABLE Course(
+#		courseCode varchar PRIMARY KEY NOT NULL,
+#		cName varchar(30),
+#		college varchar(30),
+#		foreign key(college) references College(cCode))""")
+#
+#	c.execute("""CREATE TABLE College(
+#		cCode char(10) PRIMARY KEY NOT NULL,
+#		collName varchar(30))""")
+
+#	c.execute("""CREATE TABLE Department(
+#		dName varchar PRIMARY KEY NOT NULL,
+#		college char,
+#		foreign key(college) references College(cCode))""")
+#	conn.commit()
+#	conn.close()

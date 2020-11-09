@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+				<a class="navbar-brand" href="#">Student Database</a>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="/">Add a student</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/List_page">Student List</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</div>
+	<div class="row">
+		<div class="center">
+			<h1 style="text-align:center;">DELETE STUDENT INFO
+			</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="center col-md-6">
+			<form action="" method="POST" style="text-align: justify-all;">
+				<input class="form-control" type="text" placeholder="ENTER ID NUMBER HERE" name="to_delete">
+				<div class="alert alert-danger alert-dismissible fade show" role="alert">
+					<strong>This is irreversible</strong> You should check the correct id number input and make sure for yourself if you want to delete it.
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<input class="btn btn-outline-danger" type="submit" value="Submit">	
+			</form>
+	</div>
+
+</div>
+{% endblock %}

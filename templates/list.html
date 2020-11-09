@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+				<a class="navbar-brand" href="#">Student Database</a>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="/">Add a student</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/List_page">Student List</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</div>
+	<div class="row">
+		<div class="center">
+			<h1 style="text-align:center;">STUDENT DATABASE LIST
+			</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-10 center">
+			<table class="table table-striped" border=1>
+				<thead class="thead-dark">
+					<tr>
+						<th scope="col">ID number</th>
+						<th scope="col">First Name</th>
+						<th scope="col">Last Name</th>
+						<th scope="col">Course</th>
+						<th scope="col">Year Level</th>
+						<th scope="col">Department</th>
+						<th scope="col">College</th>
+						<th scope="col">Operation</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for student in students %}
+					<tr>
+						<td>{{student[0]}}</td>
+						<td>{{student[1]}}</td>
+						<td>{{student[2]}}</td>
+						<td>{{student[3]}}</td>
+						<td>{{student[4]}}</td>
+						<td>{{student[5]}}</td>
+						<td>{{student[6]}}</td>
+						<td>
+							<a href="/update/{{student.0}}" class="btn btn-success btn-sm">Update</a>
+							<a href="/delete" class="btn btn-danger btn-delete btn-sm">Delete</a>
+						</td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
